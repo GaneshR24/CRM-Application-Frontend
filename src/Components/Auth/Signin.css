@@ -99,8 +99,14 @@
   border-radius: 5px;
   border: 1px solid #5960e6;
   background: #5960e6;
-  color: white;
   width: 100%;
+}
+
+.btn-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  transition: all 0.2s;
 }
 
 .btn-submit:hover {

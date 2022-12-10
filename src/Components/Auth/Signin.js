@@ -37,69 +37,74 @@ const Signin = () => {
 
   return (
     <>
-    <div className="signin-layout">
-    <div className="signin-box">
-      <div className="signin-header">
-        <div>
-          <img src={Logo} alt="" className="signin-header-logo" />
+      <div className="signin-layout">
+        <div className="alert alert-success fixed-top" role="alert">
+        Since backend (server-side) of this application is deployed on "Render", the application may be bit slower in the start, please wait it get loads...
         </div>
-        <h1 className="signin-header-title">Welcome to SalesHub CRM</h1>
-        <p className="signin-header-subtitle">Signin to your account</p>
-      </div>
+        <div className="signin-box">
+          <div className="signin-header">
+            <div>
+              <img src={Logo} alt="" className="signin-header-logo" />
+            </div>
+            <h1 className="signin-header-title">Welcome to SalesHub CRM</h1>
+            <p className="signin-header-subtitle">Signin to your account</p>
+          </div>
 
-      <div className="signin-body">
-        <Form
-          onSubmit={handleSubmit}
-          className="container my-3 signin-form"
-        >
-          <div className="input-field">
-          <Form.Group>
-            <Form.Label className="input-label">E-Mail</Form.Label>
-            <Form.Control
-              className="input-control"
-              type="email"
-              id="email"
-              placeholder="Enter email"
-              autoComplete="off"
-              required
-              value={userCredentials.email}
-              onChange={(e) => handleChange({ email: e.target.value })}
-            />
-          </Form.Group>
+          <div className="signin-body">
+            <Form
+              onSubmit={handleSubmit}
+              className="container my-3 signin-form"
+            >
+              <div className="input-field">
+                <Form.Group>
+                  <Form.Label className="input-label">E-Mail</Form.Label>
+                  <Form.Control
+                    className="input-control"
+                    type="email"
+                    id="email"
+                    placeholder="Enter email"
+                    autoComplete="off"
+                    required
+                    value={userCredentials.email}
+                    onChange={(e) => handleChange({ email: e.target.value })}
+                  />
+                </Form.Group>
+              </div>
+              <div className="input-field">
+                <Form.Group>
+                  <Form.Label className="input-label">Password</Form.Label>
+                  <Form.Control
+                    className=" input-control"
+                    type="password"
+                    id="password"
+                    placeholder="Enter password"
+                    autoComplete="off"
+                    required
+                    value={userCredentials.password}
+                    onChange={(e) => handleChange({ password: e.target.value })}
+                  />
+                </Form.Group>
+              </div>
+              <div className="flex-end">
+                <Link to={"forgot-password"} className="link-end">
+                  Forgot password?
+                </Link>
+              </div>
+              <Button variant="primary" type="submit" className="btn-submit">
+                <span className="btn-text">SIGN IN</span>
+              </Button>
+            </Form>
+            <p className="text-center">
+              Not a User?{" "}
+              <Link to={"/create-users"} className="link-text-center">
+                Create account here
+              </Link>
+            </p>
           </div>
-          <div className="input-field">
-          <Form.Group>
-            <Form.Label className="input-label">Password</Form.Label>
-            <Form.Control
-              className=" input-control"
-              type="password"
-              id="password"
-              placeholder="Enter password"
-              autoComplete="off"
-              required
-              value={userCredentials.password}
-              onChange={(e) => handleChange({ password: e.target.value })}
-            />
-          </Form.Group>
-          </div>
-          <div className="flex-end">
-          <Link to={"forgot-password"} className="link-end">Forgot password?</Link>
-          </div>
-          <Button variant="primary" type="submit" className="btn-submit">
-            SIGN IN
-          </Button>
-        </Form>
-        <p className="text-center">Not a User?{" "}
-         <Link to={"/create-users"} className="link-text-center">Create account here</Link>
-         </p>
+        </div>
       </div>
-      </div>
-      </div>
-
     </>
   );
 };
 
 export default Signin;
-
-

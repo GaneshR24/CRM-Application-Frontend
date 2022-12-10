@@ -101,7 +101,7 @@ const UpdateContacts = () => {
 
         <Form.Group className="mb-3 col-md-4">
           <Form.Label>Company</Form.Label>
-          <Form.Control type="text" id="company" placeholder="Enter company"
+          <Form.Control type="text" id="company" placeholder="Enter company name"
           value={contactDetails.company}
           onChange={e => handleChange({ company: e.target.value })}
           />

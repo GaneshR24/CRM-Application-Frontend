@@ -48,12 +48,6 @@ const CreateUsers = () => {
   }
 }
 
-const handleSignout = () => {
-  localStorage.clear();
-  navigate("/")
-}
-
-
   return (
     <>
     <Navbar bg="dark" variant="dark">
@@ -64,9 +58,6 @@ const handleSignout = () => {
                 Home
               </Nav.Link>
               </Nav>
-            <Nav className="d-flex">
-            <Button variant="light" className="justify-content-end" onClick={handleSignout}>Sign out</Button>
-            </Nav>
           </Container>
         </Navbar>
 

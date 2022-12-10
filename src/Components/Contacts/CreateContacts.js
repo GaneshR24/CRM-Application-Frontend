@@ -86,7 +86,7 @@ const CreateContacts = () => {
 
         <Form.Group className="mb-3 col-md-4">
           <Form.Label>Company</Form.Label>
-          <Form.Control type="text" id="Company" placeholder="Enter Name" required
+          <Form.Control type="text" id="Company" placeholder="Enter company name" required
           value={contactDetails.company}
           onChange={e => handleChange({ company: e.target.value })}
           />
