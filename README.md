@@ -1,3 +1,7 @@
+CRM Application - Frontend
+
+Since backend (server-side) of this application is deployed on "Render", the application may be bit slower in the start(in Sign up and in Sign in), please wait it get loads...
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
